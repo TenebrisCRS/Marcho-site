@@ -4,9 +4,72 @@
 @import 'global';
 
 
+.header {
+  padding: 40px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
 
+}
 
+
+.menu {
+  &__list {
+    display: flex;
+  }
+
+  &__list-item + .menu__list-item {
+    padding-left: 35px;
+  }
+
+  &__list-link {
+    color: $title;
+    @extend %roboto-700;
+    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.3s, color 0.3s;
+
+    &:hover {
+      color: $accent;
+      border-bottom-color: $accent;
+    }
+  }
+
+  &__list-link--active {
+    color: $accent;
+    border-bottom-color: $accent;
+  }
+
+}
+
+
+.user-nav {
+  display: flex;
+
+  &__link {
+    position: relative;
+  }
+
+  &__link + .user-nav__link {
+    padding-left: 25px;
+  }
+  &__num {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $accent;
+    font-size: 12px;
+    color: #fff;
+    top: -9px;
+    right: -14px;
+    text-align: center;
+    line-height: 20px;
+  }
+}
 
 
 
