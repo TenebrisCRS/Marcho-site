@@ -27,20 +27,22 @@
 
   &__list-link {
     color: $title;
-    @extend %roboto-700;
-    padding-bottom: 1px;
+    @extend %roboto-400;
+    padding: 0 2px 1px;
     border-bottom: 1px solid transparent;
     transition: border-bottom-color 0.3s, color 0.3s;
 
     &:hover {
       color: $accent;
       border-bottom-color: $accent;
+      @extend %roboto-700;
     }
   }
 
   &__list-link--active {
     color: $accent;
     border-bottom-color: $accent;
+    @extend %roboto-700;
   }
 
 }
