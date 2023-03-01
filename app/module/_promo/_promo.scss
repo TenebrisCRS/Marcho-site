@@ -50,5 +50,40 @@
     display: inline-block;
     border: 1px solid $accent;
     padding: 14px 27px;
+    margin-top: 55px;
   }
 }
+
+@media (max-width: 620px) {
+  .promo {
+    padding: 60px 0;
+
+    &__clock {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    &__clock-item {
+      margin: 20px 35px;
+    } 
+  }
+}
+
+@media (max-width: 450px) {
+  .promo {
+    &__clock {
+      margin-top: 30px;
+    }
+
+    &__clock-item {
+      margin: 8px 8px;
+    }
+
+    &__link {
+      margin-top: 30px;
+    }
+  }
+}
+
+
+

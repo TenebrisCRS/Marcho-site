@@ -21,7 +21,7 @@
     content: '';
     position: absolute;
     background-repeat: no-repeat;
-    z-index: 0;
+    z-index: -1;
   }
 
   &::before {
@@ -44,7 +44,7 @@
     background-color: #fff;
     padding: 60px 30px;
     box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
-    max-width: 370px;
+    width: 370px;
     z-index: 1;
   }
 
@@ -61,7 +61,8 @@
     min-height: 635px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: 30px;
+    column-gap: 30px;
+    row-gap: 30px;
   }
 
   &__item {
@@ -124,5 +125,110 @@
     color: $title;
     @extend %roboto-400;
     transition: color 0.2s linear;
+  }
+}
+
+
+
+
+@media(max-width:1235px) {
+  .info {
+    &::after {
+      right: -15px;
+    }
+    &__item {
+      width: 340px;
+      padding: 20px;
+    }
+  }
+}
+
+@media(max-width:1100px) {
+  .info {
+    display: block;
+
+    &__item {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    &__item-title {
+      padding: 20px 0 10px;
+    }
+  }
+
+  .categories {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+    }
+
+    &__item {
+      background-position: center top;
+
+      &:nth-child(1) {
+        grid-row: auto;
+      }
+
+      &:nth-child(2) {
+        grid-column: auto;
+        background-position: center right;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .categories {
+    &__items  {
+      min-height: 385px;
+    }
+    &__item {
+      background-image: none !important;
+      display: flex;
+      justify-content: center;
+      padding-left: 15px;
+      padding-top: 0;
+      flex-direction: column;
+      
+      
+      &:nth-child(1) {
+        background-color: #f4dff0;
+      }
+      &:nth-child(2) {
+        background-color: #d7efef;
+      }
+      &:nth-child(3) {
+        background-color: #fff6a7;
+      }
+      &:nth-child(4) {
+        background-color: #ededed;
+      }
+    }
+  }
+}
+
+@media(max-width:620px) {
+  .categories {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 10px;
+    }
+
+    &__item {
+      padding: 15px 10px;
+    }
+  }
+
+  .categories-info {
+    padding: 120px 0 16px;
+  }
+}
+
+@media(max-width:375px) {
+  .info {
+    &__item-title {
+      font-size: 20px;
+    }
   }
 }
