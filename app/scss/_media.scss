@@ -1,0 +1,308 @@
+@media(max-width: 1230px) {
+  .page-404 {
+    &__img {
+      width: 40%;
+    }
+  }
+  .person,
+  .latest-post {
+    display: none;
+  }
+  
+  .blog-page {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__content {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    &__img {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .filter-category,
+    .filter-popular {
+      display: none;
+    }
+
+    &__aside {
+      order: -1;
+      width: 100%;
+    }
+
+    .filter-search {
+      &__input {
+        width: 100%;
+      }
+    }
+  }
+
+  .shop {
+    &__inner {
+      display: block;
+    }
+
+    &__filters {
+      width: 100%;
+      margin-right: 0;
+      display: none;
+      position: absolute;
+      top: 20px;
+      left: 0;
+      z-index: 100;
+      background-color: #fff;
+    }
+
+    &__filter-btn {
+      display: block;
+      border: none;
+      background-color: $default;
+      padding: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 3px;
+      position: fixed;
+      right: 10px;
+      z-index: 101;
+      bottom: 50px;
+      cursor: pointer;
+    }
+  }
+
+  .shop-content {
+    &__inner {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__nogrid {
+      display: flex;
+    }
+  }
+
+  .product-slide {
+    &__thumb {
+      display: none !important;
+    }
+  }
+
+  .product-one {
+    &__slide {
+      width: auto;
+    }
+  }
+}
+
+@media(max-width: 1100px) {
+  .contact {
+    &__inner {
+      display: block;
+    }
+
+    &__info {
+      margin-right: 0;
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+
+    &__info-list {
+      margin-bottom: 30px;
+    }
+    
+
+    &__form {
+      box-shadow: none;
+      padding: 0;
+    }
+
+    &__form-box {
+      display: block;
+      margin-bottom: 0;
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+@media(max-width: 992px) {
+  .page-404 {
+    &__img {
+      display: none;
+    }
+  }
+}
+
+@media(max-width: 860px) {
+  .shop-content {
+    &__inner {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .shop-content {
+    &__filter-buttons {
+      display: none;
+    }
+
+    &__filter {
+      padding: 20px 25px 20px 0px;
+    }
+  }
+}
+
+@media(max-width: 620px) {
+  .blog-page {
+    padding: 60px 0;
+
+    &__item-box {
+      padding: 20px;
+    }
+
+    &__img {
+      height: 260px;
+    }
+  }
+
+  .blog-one {
+    &__text {
+      padding: 20px 10px;
+    }
+
+    &__info {
+      display: block;
+    }
+
+    &__info-item {
+      margin-bottom: 10px;
+    }
+
+    &__box {
+      flex-wrap: wrap;
+    }
+
+    &__tags {
+      padding-right: 10px;
+    }
+
+    .comments-form {
+      padding-bottom: 0;
+
+      &__box-input {
+        display: block;
+        margin-bottom: 0;
+      }
+
+      &__text-input {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .shop-content {
+    &__inner {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+@media(max-width: 450px) {
+  .blog-one {
+    &__box {
+      display: block; 
+    }
+
+    &__tags {
+      margin-bottom: 10px;
+    }
+
+    &__author-img {
+      display: none;
+    }
+
+    &__text {
+      blockquote {
+        padding: 10px;
+      }
+    }
+
+    .comments {
+      &__img {
+        display: none;
+      }
+    }
+  }
+
+  .map {
+    padding: 60px 0;
+  }
+
+  #map {
+    height: 250px;
+  }
+
+  .contact {
+    &__info-title {
+      font-size: 28px;
+      line-height: 34px;
+    }
+  }
+
+  .pagination {
+    &__arrows {
+      display: none;
+    }
+  }
+} 
+
+@media(max-width: 375px) {
+  .blog-page {
+    &__item-box {
+      padding: 10px 5px;
+    }
+
+    &__img {
+      height: 170px;
+    }
+
+    .filter__item {
+      padding: 25px 15px;
+    }
+
+    &__slider {
+      .slick-next {
+        right: 10px;
+      }
+
+      .slick-prev {
+        left: 10px;
+      }
+    }
+  }
+
+  .contact {
+    &__info-item {
+      padding-left: 55px;
+
+      &::before {
+        top: 1px;
+        width: 50px;
+        height: 50px;
+      }
+
+      & ::after {
+        top: 16px;
+        left: 15px;
+      }
+    }
+  }
+} 
